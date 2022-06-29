@@ -4,7 +4,7 @@ open class Animal(protected open var energy: Int,
                   protected open var weight: Int,
                   protected open val maximumAge: Int,
                   protected open val name: String) {
-    private var currentAge = 1
+    private var currentAge = Random.nextInt(1,10)
     val isTooOld = currentAge >= maximumAge
 
     fun sleep () {
