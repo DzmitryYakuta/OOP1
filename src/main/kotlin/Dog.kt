@@ -1,6 +1,4 @@
-class Dog : Animal {
-    constructor(energy: Int, weight: Int, maximumAge: Int, name: String) : super(energy, weight, maximumAge, name)
-
+class Dog(energy: Int, weight: Int, maximumAge: Int, name: String) : Animal(energy, weight, maximumAge, name) {
     override fun move() {
         energy -= 5
         weight -= 1
