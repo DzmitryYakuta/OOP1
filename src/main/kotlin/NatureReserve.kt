@@ -17,7 +17,8 @@ open class NatureReserve {
     private val animal1 = Animal(20, 5, 3, "Animal 1")
     private val animal2 = Animal(30, 15, 30, "Animal 2")
 
-    private var zoo = mutableListOf(bird1, bird2, bird3, bird4, bird5, fish1, fish2, fish3, dog1, dog2, animal1, animal2)
+    private var zoo =
+        mutableListOf(bird1, bird2, bird3, bird4, bird5, fish1, fish2, fish3, dog1, dog2, animal1, animal2)
 
     fun zooLife() {
         println("Number of animals in the zoo - ${zoo.size}")
@@ -39,6 +40,5 @@ open class NatureReserve {
             }
         }
         println("Number of animals in the zoo - ${zoo.size}")
-        zoo.forEach { println(it.condition()) }
     }
 }

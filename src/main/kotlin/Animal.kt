@@ -43,8 +43,4 @@ open class Animal(
         weight -= 2
         return ChildAnimal(name, maximumAge)
     }
-
-    fun condition() {
-        println("$name. Age - $currentAge. Energy - $energy. Weight - $weight.")
-    }
 }
