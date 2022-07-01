@@ -21,7 +21,6 @@ open class NatureReserve {
 
     fun zooLife() {
         println("Number of animals in the zoo - ${zoo.size}")
-        //zoo.forEach { println(it.condition()) }
         val n = 5
 
         for (i in 1..n) {
@@ -40,6 +39,6 @@ open class NatureReserve {
             }
         }
         println("Number of animals in the zoo - ${zoo.size}")
-        //zoo.forEach { println(it.condition()) }
+        zoo.forEach { println(it.condition()) }
     }
 }

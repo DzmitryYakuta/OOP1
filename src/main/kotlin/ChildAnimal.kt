@@ -8,6 +8,6 @@ class ChildAnimal(
 ) : Animal(name = name, maximumAge = maximumAge, energy = energy, weight = weight) {
 
     init {
-        println("Birth $name. Energy - $energy. Weight - $weight.")
+        println("$name was born. Energy - $energy. Weight - $weight.")
     }
 }

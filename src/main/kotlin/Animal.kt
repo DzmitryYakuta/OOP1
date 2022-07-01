@@ -8,7 +8,10 @@ open class Animal(
 ) {
     private var currentAge = Random.nextInt(1, 10)
     private val isTooOld = currentAge >= maximumAge
-    val isDead = isTooOld || energy <= 0 || weight <= 0
+    open val isDead: Boolean
+        get() {
+            return isTooOld || energy <= 0 || weight <= 0
+        }
 
     fun sleep() {
         energy += 5
