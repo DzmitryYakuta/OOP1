@@ -15,32 +15,33 @@ open class Animal(
 
     fun sleep() {
         energy += 5
-        currentAge += 1
+        currentAge ++
         println("$name is sleeping")
     }
 
     fun eat() {
         energy += 3
-        weight += 1
+        weight ++
+        if (Random.nextBoolean()) currentAge ++
         println("$name eats")
     }
 
     open fun move() {
         energy -= 5
-        weight -= 1
+        weight --
+        if (Random.nextBoolean()) currentAge ++
         println("$name is moving")
     }
 
     fun tryIncrementAge() {
+        val newAge = currentAge + Random.nextInt(1, 10)
         if (Random.nextBoolean()) {
-            if (!isTooOld || energy > 0 || weight > 0) currentAge += Random.nextInt(1, 10)
+            if (newAge <= maximumAge || energy > 0 || weight > 0) currentAge = newAge
         }
         println("$name age - $currentAge")
     }
 
     fun birth(): ChildAnimal {
-        energy -= 5
-        weight -= 2
         return ChildAnimal(name, maximumAge)
     }
 }
